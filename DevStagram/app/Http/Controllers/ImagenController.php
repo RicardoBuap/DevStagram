@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class ImagenController extends Controller
 {
-    public function store()
+    public function store(Request $request)
     {
-        return "Desde Imagen Controller";
+        $imagen = $request->file('file');
+
+        return response()->json(['imagen' => $imagen->extension()]);
     }
 }
+
+//composer require intervention/image

@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        @stack('styles')
         @vite('resources/css/app.css')
-        <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+        @vite('resources/js/app.js')
+        {{-- <link rel="stylesheet" href="{{ asset('css/app.css')}}">x--}}
         <title>DevStagram - @yield('titulo')</title>
-        <script src="{{ asset('js/app.js')}}" defer></script>
+        {{-- <script src="{{ asset('js/app.js')}}" defer></script> --}}
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     </head>
