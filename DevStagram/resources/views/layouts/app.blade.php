@@ -6,11 +6,10 @@
         @stack('styles')
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
-        {{-- <link rel="stylesheet" href="{{ asset('css/app.css')}}">x--}}
         <title>DevStagram - @yield('titulo')</title>
-        {{-- <script src="{{ asset('js/app.js')}}" defer></script> --}}
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    @livewireStyles
     </head>
     <body class="bg-gray-100">
         <header class="p-5 border-b bg-white shadow">
@@ -66,5 +65,6 @@
         <footer class="mt-10 text-center p-5 text-gray-500 font-bold uppercase">
             DevStagram - Todos los derechos reservados {{ now() -> year}}.
         </footer>
+    @livewireScripts
     </body>
 </html>
