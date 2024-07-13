@@ -45,6 +45,29 @@
                         value=""
                     />
                 </div>
+                <input type="hidden" name="email" value=" {{ auth()->user()->email}} ">
+                <div class="mb-5">
+                    <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
+                        Password
+                    </label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Password de confirmación"
+                        class="border p-3 w-full rounded-lg"
+                    />
+                    @error('password')
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                        {{ $message }}
+                    </p>
+                    @enderror
+                </div>
+                @if (session('mensaje'))
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                        {{ session('mensaje') }}
+                    </p>
+                @endif
                 <input
                     type="submit"
                     value="Guardar Cambios"
